@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#f8f7f4">
+    <title>PULL&amp;BEAR — Tienda de moda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="announcement">NUEVA COLECCIÓN · ENVÍO GRATIS EN COMPRAS DESDE $1,499 MXN</div>
+    <header class="header"><a href="#inicio" class="brand" id="logo">PULL&amp;BEAR<span>®</span></a>
+        <nav><a href="#catalogo" data-filter="Todos">NOVEDADES</a><a href="#catalogo" data-filter="Todos">ROPA</a><a
+                href="#nosotros">NOSOTROS</a></nav>
+        <div class="header-actions"><label class="header-search"><svg viewBox="0 0 24 24" width="18" height="18"
+                    aria-hidden="true">
+                    <circle cx="10.8" cy="10.8" r="7" fill="none" stroke="currentColor" stroke-width="2" />
+                    <path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg><input type="search" id="searchInput" placeholder="Buscar prendas"
+                    aria-label="Buscar prendas"></label><button id="favBtn" aria-label="Favoritos">♡ <small
+                    id="favCount">0</small></button><button id="cartBtn" aria-label="Carrito"><svg viewBox="0 0 24 24"
+                    width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <circle cx="9" cy="20" r="1.4" />
+                    <circle cx="19" cy="20" r="1.4" />
+                    <path d="M2 3h3l3 12h12l2-9H6" />
+                </svg> <small id="cartCount">0</small></button></div>
+    </header>
+    <main id="inicio">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">COLECCIÓN / 2026</p>
+                <h1>TU ESTILO.<br><em>TU DÍA A DÍA.</em></h1>
+                <p>Prendas esenciales. Actitud sin esfuerzo.<br>Diseñadas para tu propio ritmo.</p><a
+                    class="btn btn-dark" href="#catalogo">EXPLORAR COLECCIÓN <span>↗</span></a>
+                <p class="hero-index">01 — 03 / MODA CONTEMPORÁNEA</p>
+            </div>
+            <div class="hero-art">
+                <div class="hero-card a"><img src="images/03.jpg" alt="Chaqueta urbana"></div>
+                <div class="hero-card b"><img src="images/11.jpg" alt="Jeans wide leg"></div><span
+                    class="hero-vertical">NUEVA TEMPORADA · NUEVAS IDEAS</span>
+            </div>
+        </section>
+        <section class="benefits"><span>DISEÑO CONTEMPORÁNEO</span><span>PRECIOS EN MXN</span><span>COMPRA FÁCIL Y
+                SEGURA*</span><span>ESTILO PARA TODOS</span></section>
+        <section id="catalogo" class="catalog wrap">
+            <div class="section-top">
+                <div>
+                    <p class="eyebrow">DESCUBRE LA COLECCIÓN</p>
+                    <h2>Lo que viene bien.</h2>
+                </div><span id="results">24 PRODUCTOS</span>
+            </div>
+            <div class="department-bar" aria-label="Departamentos"><span>COMPRAR POR DEPARTAMENTO</span><button
+                    class="active" data-department="Todos">TODOS</button><button
+                    data-department="Mujer">MUJER</button><button data-department="Hombre">HOMBRE</button><button
+                    data-department="Unisex">UNISEX</button></div>
+            <div class="filters">
+                <div id="categoryFilters" class="filter-buttons"></div><select id="sort" aria-label="Ordenar">
+                    <option value="featured">DESTACADOS</option>
+                    <option value="low">PRECIO: MENOR A MAYOR</option>
+                    <option value="high">PRECIO: MAYOR A MENOR</option>
+                    <option value="name">NOMBRE A–Z</option>
+                </select>
+            </div>
+            <div id="productGrid" class="product-grid"></div>
+            <div id="empty" class="empty hidden">No encontramos productos. Intenta otra búsqueda.</div>
+        </section>
+        <section class="editorial" id="nosotros">
+            <div>
+                <p class="eyebrow">SOBRE NUESTRA TIENDA</p>
+                <h2>Menos ruido.<br>Más estilo.</h2>
+                <p>Reunimos ropa cómoda, moderna y versátil para que encuentres prendas que
+                    se adapten a tu manera de vestir. Explora diseños sencillos, estampados originales y opciones para
+                    diferentes gustos.</p>
+                <p>Selecciona tus prendas favoritas, consulta tallas y conoce el proceso de compra a través de una
+                    experiencia sencilla y clara.</p><a href="#catalogo">EXPLORAR TODA LA ROPA ↗</a>
+            </div><img src="images/04.jpg" alt="Sudadera esencial">
+        </section>
+    </main>
+    <footer><strong>PULL&amp;BEAR®</strong>
+        <p>Moda contemporánea · México</p>
+        <p class="footer-authors"><span class="footer-authors-label">Creadores</span><span
+                class="footer-authors-names"><span>Velázquez Hernández Alfredo</span><span>Cortez Agudo Cristofer
+                    Azael</span></span></p>
+    </footer>
+    <div id="overlay" class="overlay hidden"></div>
+    <aside id="drawer" class="drawer" aria-label="Panel de compras">
+        <div class="drawer-head">
+            <h2 id="drawerTitle">TU CARRITO</h2><button class="close" data-close aria-label="Cerrar">×</button>
+        </div>
+        <div id="drawerBody" class="drawer-body"></div>
+        <div id="drawerFooter" class="drawer-footer"></div>
+    </aside>
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true"><button class="modal-close" data-close
+            aria-label="Cerrar">×</button>
+        <div id="modalContent"></div>
+    </div>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
